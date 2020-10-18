@@ -17,6 +17,12 @@
 
             <Label Content="_Contact Phone #:" Target="{Binding ElementName=ContactNumber}" Margin="0,50,0,0"/>
 			<TextBox Name="ContactNumber" Margin="0,4,20,20"/>
+
+            <Button
+	            ToolTip="Add Rental"
+	            Click="addHardwareToDatabase">
+				<TextBlock Text="Rent Hardware" Name="AddRental"/>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>
