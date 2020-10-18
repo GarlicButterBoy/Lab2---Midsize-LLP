@@ -25,7 +25,7 @@ namespace Lab2___Midsize_LLP
         public ViewExistingRentals()
         {
             InitializeComponent();
-            FillDataGrid();
+            FillDataGrid(); //Populate the window with the database data
         }
 
         private void FillDataGrid()

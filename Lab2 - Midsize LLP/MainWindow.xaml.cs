@@ -48,7 +48,8 @@ namespace Lab2___Midsize_LLP
                     //Show it on the settings content panel
                     this.SettingsContentPanel.Children.Add(controlAddRental);
                 }
-                if (listView.SelectedItem.Equals(HardwareInventory))
+                //if the user clicks on "View Rented Hardware"
+                if (listView.SelectedItem.Equals(ViewRentedHardware))
                 {
                     //Create the View Rented Hardware screen (ViewRentedHardware User Control)
                     Control controlViewRentedHardware = new ViewExistingRentals();

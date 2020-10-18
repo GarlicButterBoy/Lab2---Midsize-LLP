@@ -15,9 +15,9 @@
         </Grid.ColumnDefinitions>
         <Grid Background="#01FFFFFF">
             <StackPanel>
-
+<!--Menu Title-->
 	            <StackPanel Orientation="Horizontal">
-                    <Button Foreground="Black" Background="{x:Null}" BorderBrush="{x:Null}"/>
+
                     <TextBlock Text="Midsize LLP." FontSize="18" Margin="10" VerticalAlignment="Center"/>
                 </StackPanel>
 
@@ -26,14 +26,15 @@
                         <TextBlock Text="Main Menu" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
-
+<!--Menu Items, Allows for a selection changed event-->
                 <ListView FontSize="12" SelectionChanged="SettingsListViewSelectionChanged">
                     <ListViewItem Padding="1" x:Name="HardwareInventory">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Rent Hardware" TextAlignment="Center" VerticalAlignment="Center"/>
+	                        <!--First Button That Can be Selected-->
+	                        <TextBlock Text="Rent Hardware" TextAlignment="Center" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-
+	                <!--Second Button that can be Selected-->
                     <ListViewItem Padding="1" x:Name="ViewRentedHardware">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="View Already Rented Hardware" VerticalAlignment="Center"/>
@@ -43,7 +44,7 @@
 
             </StackPanel>
         </Grid>
-
+	    <!--White space for the right column, to be populated with User Controls after a selection-->
         <Grid Grid.Column="1" Background="White" x:Name="SettingsContentPanel">
 
         </Grid>

@@ -25,8 +25,9 @@ namespace Lab2___Midsize_LLP.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Computer Programmer DC\\Semester 3\\NETD 3\\Labs\\Lab 2\\Lab2 - Midsize LLP\\Lab2 - " +
-            "Midsize LLP.sln")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Computer Programmer DC\\Se" +
+            "mester 3\\NETD 3\\Labs\\Lab 2\\Lab2 - Midsize LLP\\Lab2 - Midsize LLP\\midsizellp.mdf\"" +
+            ";Integrated Security=True")]
         public string connection_string {
             get {
                 return ((string)(this["connection_string"]));
