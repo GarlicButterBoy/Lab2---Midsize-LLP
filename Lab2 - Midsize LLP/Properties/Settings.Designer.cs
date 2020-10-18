@@ -8,22 +8,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab2___Midsize_LLP.Properties
-{
-
-
+namespace Lab2___Midsize_LLP.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Computer Programmer DC\\Semester 3\\NETD 3\\Labs\\Lab 2\\Lab2 - Midsize LLP\\Lab2 - " +
+            "Midsize LLP.sln")]
+        public string connection_string {
+            get {
+                return ((string)(this["connection_string"]));
+            }
+            set {
+                this["connection_string"] = value;
             }
         }
     }

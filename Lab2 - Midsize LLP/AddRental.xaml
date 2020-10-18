@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Lab2___Midsize_LLP.AddRental"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Lab2___Midsize_LLP"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="20">
+
+			<Label Content="_Employee Name:" Target="{Binding ElementName=EmployeeName}" Margin="0,50,0,0"/>
+			<TextBox Name="EmployeeName" Margin="0,4,20,20"/>
+
+            <Label Content="_Item Description:" Target="{Binding ElementName=ItemDescription}" Margin="0,50,0,0"/>
+			<TextBox Name="ItemDescription" Margin="0,4,20,20"/>
+
+            <Label Content="_Contact Phone #:" Target="{Binding ElementName=ContactNumber}" Margin="0,50,0,0"/>
+			<TextBox Name="ContactNumber" Margin="0,4,20,20"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

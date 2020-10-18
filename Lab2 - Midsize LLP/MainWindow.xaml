@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2___Midsize_LLP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        >
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350" />
+
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Background="#01FFFFFF">
+            <StackPanel>
+
+	            <StackPanel Orientation="Horizontal">
+                    <Button Foreground="Black" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBlock Text="Midsize LLP." FontSize="18" Margin="10" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <ListViewItem Padding="0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Main Menu" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+
+                <ListView FontSize="12" SelectionChanged="SettingsListViewSelectionChanged">
+                    <ListViewItem Padding="1" x:Name="HardwareInventory">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Rent Hardware" TextAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Padding="1" x:Name="ViewRentedHardware">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="View Already Rented Hardware" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="White" x:Name="SettingsContentPanel">
+
+        </Grid>
+
     </Grid>
 </Window>

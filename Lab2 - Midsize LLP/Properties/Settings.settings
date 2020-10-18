@@ -1,7 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lab2___Midsize_LLP.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="connection_string" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Computer Programmer DC\Semester 3\NETD 3\Labs\Lab 2\Lab2 - Midsize LLP\Lab2 - Midsize LLP.sln</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
