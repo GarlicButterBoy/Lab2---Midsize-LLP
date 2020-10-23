@@ -25,7 +25,7 @@ namespace Lab2___Midsize_LLP
         {
             InitializeComponent();
         }
-        //Generates the ID
+        //Generates the a random number
         public int random()
         {
             //Generates a pretty large random number that will be used as an ID for the database
@@ -46,35 +46,39 @@ namespace Lab2___Midsize_LLP
                 conn.Open();
 
                 //generate a random ID
-                int ID = random();
+
                 //If any of the textboxes are empty, do not add it to the database
-                if (EmployeeName.Text == string.Empty || ItemDescription.Text == string.Empty || ContactNumber.Text == "")
+                if (EmployeeID.Text == string.Empty || EmployeeName.Text == string.Empty || ItemDescription.Text == string.Empty || ContactNumber.Text == "")
                 {
                     MessageBox.Show("None of the fields can be empty! Please fill in the required information.");
                 } //if ID IS NOT an integer, do not add to database
-                else if (!(ID is int)) //same as (ID.GetType() != typeof(int))
-                { //This will never throw since I'm generating a random int, but it has been tested and does work properly
-                    MessageBox.Show("Employee ID must be a whole number!");
-                }
-                else //otherwise add the data to the database
+
+                int ID = int.Parse(EmployeeID.Text);
+
+                if (ID.GetType() == typeof(int))
                 {
 
-                //Insert Query
-                string insertQuery = "INSERT INTO Hardware (empID, name, description, phone) VALUES('" + ID + "', '" + EmployeeName.Text + "', '" + ItemDescription.Text + "', '" + ContactNumber.Text + "')";
-                //create the command
-                SqlCommand command = new SqlCommand(insertQuery, conn);
-                //execute the query
-                command.ExecuteNonQuery();
-                //close the connection
-                conn.Close();
+                    //Insert Query
+                    string insertQuery = "INSERT INTO Hardware (empID, name, description, phone) VALUES('" + ID + "', '" + EmployeeName.Text + "', '" + ItemDescription.Text + "', '" + ContactNumber.Text + "')";
+                    //create the command
+                    SqlCommand command = new SqlCommand(insertQuery, conn);
+                    //execute the query
+                    command.ExecuteNonQuery();
+                    //close the connection
+                    conn.Close();
 
-                //Show a Popup Message if the record is added successfully
-                MessageBox.Show("Congrats! You have Rented That Hardware Item!");
-                //Empty the text boxes
-                EmployeeName.Text = string.Empty;
-                ItemDescription.Text = string.Empty;
-                ContactNumber.Text = string.Empty;
+                    //Show a Popup Message if the record is added successfully
+                    MessageBox.Show("Congrats! You have Rented That Hardware Item!");
+                    //Empty the text boxes
+                    EmployeeID.Text = string.Empty;
+                    EmployeeName.Text = string.Empty;
+                    ItemDescription.Text = string.Empty;
+                    ContactNumber.Text = string.Empty;
 
+                }
+                else //otherwise add the data to the database
+                { //This will never throw since I'm generating a random int, but it has been tested and does work properly
+                    MessageBox.Show("Employee ID must be a whole number!");
                 }
             }
             catch  (Exception ex) //Throw any errors without crashing the program

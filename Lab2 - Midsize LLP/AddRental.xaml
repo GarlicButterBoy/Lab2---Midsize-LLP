@@ -8,7 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="20">
-			<!--Employee Name Label and Textbox-->
+	        <!--Employee Name Label and Textbox-->
+	        <Label Content="_Employee ID:" Target="{Binding ElementName=EmployeeID}" Margin="0,50,0,0"/>
+	        <TextBox Name="EmployeeID" Margin="0,4,20,20"/>
+            <!--Employee Name Label and Textbox-->
 			<Label Content="_Employee Name:" Target="{Binding ElementName=EmployeeName}" Margin="0,50,0,0"/>
 			<TextBox Name="EmployeeName" Margin="0,4,20,20"/>
 			<!--Item Description Label and Textbox-->
