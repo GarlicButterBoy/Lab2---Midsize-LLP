@@ -40,6 +40,13 @@
                             <TextBlock Text="View Already Rented Hardware" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
+	                <!--Third Button that can be selected-->
+                    <ListViewItem Padding="1" x:Name="SearchInventory">
+		                <StackPanel Orientation="Horizontal">
+
+			                <TextBlock Text="Search" TextAlignment="Center" VerticalAlignment="Center"/>
+		                </StackPanel>
+	                </ListViewItem>
                 </ListView>
 
             </StackPanel>

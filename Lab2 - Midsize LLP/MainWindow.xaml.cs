@@ -56,6 +56,14 @@ namespace Lab2___Midsize_LLP
                     //Show it on the settings content panel
                     this.SettingsContentPanel.Children.Add(controlViewRentedHardware);
                 }
+                //if the user clicks on "View Rented Hardware"
+                if (listView.SelectedItem.Equals(SearchInventory))
+                {
+                    //Create the View Rented Hardware screen (ViewRentedHardware User Control)
+                    Control controlSearchInventory = new Search();
+                    //Show it on the settings content panel
+                    this.SettingsContentPanel.Children.Add(controlSearchInventory);
+                }
             }
         }
     }
